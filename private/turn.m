@@ -12,6 +12,7 @@
 % See the License for the specific language governing permissions and
 % limitations under the License.
 
+function res = turn(prm, var, res)
 %% Turn
 % Compute the turn performance as a function of the velcity and the altitude
 % Adrien Crovato
@@ -21,7 +22,6 @@
 % T - D = Ps * W / v
 % L * sin(phi) = m * v^2 / R
 % rate: omega = g / v * sqrt(n^2 - 1)
-function res = turn(prm, var, res)
 
 % constants
 w = prm.mtow * 9.81; % weight

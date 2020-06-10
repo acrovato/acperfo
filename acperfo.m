@@ -12,13 +12,13 @@
 % See the License for the specific language governing permissions and
 % limitations under the License.
 
+function acperfo(fpath_)
 %% acperf
-% Aircraft performance computer
+% Aircraft performance utilities
 % Adrien Crovato
 %
 % Usage: acperfo(path/to/param_file)
 
-function acperfo(fpath_)
 % Clear
 clearvars -except fpath_;
 close all;

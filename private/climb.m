@@ -12,6 +12,7 @@
 % See the License for the specific language governing permissions and
 % limitations under the License.
 
+function res = climb(prm, var, res)
 %% Climb
 % Compute the climb performance as a function of the velcity and the altitude
 % Adrien Crovato
@@ -21,7 +22,7 @@
 % T - D - W * sin(gamma) = 0
 % AOC: sin(gamma) = 1/W * (T - D)
 % ROC: hDot = sin(gamma) * V
-function res = climb(prm, var, res)
+
 % constants
 w = prm.mtow * 9.81; % weight
 s = prm.S; % wing area

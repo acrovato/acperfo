@@ -14,7 +14,9 @@
 
 function res = toldg(prm, res)
 %% Take off and langing performance
-%   Gudmunsson
+% Compute the take-off and landing performance at sea-level, based on
+% Gudmunsson formula
+% Adrien Crovato
 
 % constants
 w = prm.mtow * 9.81; % weight
@@ -66,14 +68,4 @@ disp(['Take-off run = ', num2str(round(sG / 0.3048)), ' ft']);
 disp(['Take-off distance = ', num2str(round(sTO / 0.3048)), ' ft']);
 disp(['Landing run = ', num2str(round((sFR+sBR) / 0.3048)), ' ft']);
 disp(['Landing distance = ', num2str(round(sLD / 0.3048)), ' ft']);
-
 end
-
-% function t = thrust(v, prm)
-% if jet
-%     if (v ~= 0); t = prm.throttle; else; t = 0.5 * prm.throttle; end % thrust for jet engine at v or idle thrust
-% else
-%     p = prm.throttle * 745.7 * prm.etap * 0.5;
-%     if (v ~= 0); t = p / v ; else; t = 0.05 * p; end % thrust for propeller engine at v or 5% static thust
-% end
-% end

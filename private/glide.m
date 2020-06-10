@@ -12,6 +12,7 @@
 % See the License for the specific language governing permissions and
 % limitations under the License.
 
+function res = glide(prm, var, res)
 %% Glide
 % Compute glide performance
 % Adrien Crovato
@@ -19,7 +20,6 @@
 % Speeds are computed assuming equilibrium along lift and drag directions,
 % L = W * cos(gamma)
 % D = W * sin(gamma)
-function res = glide(prm, var, res)
 
 % constants
 w = prm.mtow * 9.81; % weight
@@ -73,5 +73,4 @@ yyaxis right
 plot(v, hDot, 'LineWidth', 2.0);
 ylabel('$\dot{h}$','Interpreter', 'Latex');
 title('Angle and rate of descent');
-
 end

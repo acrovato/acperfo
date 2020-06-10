@@ -12,13 +12,14 @@
 % See the License for the specific language governing permissions and
 % limitations under the License.
 
+function t = thrust(v, h, prm)
 %% Thrust
 % Compute the thurst as a function of the velocity and the altitude
 % Adrien Crovato
 %
 % Todo: replace atmoisa by own function or open-source project
-%
-function t = thrust(v, h, prm)
+% Todo: use v and h as vector/matrix to reduce computational cost
+
 if prm.jet
     [T, ~, P, ~] = atmosisa(h);
     thrust = prm.throttle * P / 101325 .* sqrt(288.15 ./ T); % N, (NASA)

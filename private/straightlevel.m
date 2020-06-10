@@ -42,7 +42,6 @@ res.vc = vMax;
 % Display
 disp(['Stall speed = ', num2str(round(vStall / 0.514)), ' KEAS']);
 disp(['Maximum speed = ', num2str(round(vMax / 0.514)), ' KEAS']);
-
 end
 
 function f = equil(v, rho, k, w, prm)
